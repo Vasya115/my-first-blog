@@ -25,7 +25,7 @@ SECRET_KEY = '(gk#$=iiw8^yclzs^&)w6t#m)t=10n(g4^y1ho6&l8nj4^%a2+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'Monyasha.pythonanywhere.com']
 
 
 # Application definition
