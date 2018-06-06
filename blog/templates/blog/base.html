@@ -11,10 +11,16 @@
 	
     </head>
     <body>
+	
         <div class="page-header">
-            <div id="time"></div>
-            <h1><a href="/">Ferret Blog</a></h1>
-        </div>
+		
+            <div id="time">
+	    </div>
+	    {% if user.is_authenticated %}
+	    <div id="edit"><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></div>
+	    {% endif %}
+            <h1><a href="/">Моняшкин Блог</a></h1>
+	 </div>
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
