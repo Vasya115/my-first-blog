@@ -13,13 +13,33 @@
     <body>
 	
         <div class="page-header">
-		
-            <div id="time">
+		{% if user.is_authenticated %}
+		<a href="{% url 'restricted' %}">Проверка авторизованности</a><br />
+		<a href="{% url 'logout' %}">Выйти</a><br />
+		{% else %}
+		<a href="{% url 'register' %}">Жми, чтобы познакомиться ближе!</a>
+		<a href="{% url 'login' %}">Логин</a>
+		{% endif %}
+       	     <div id="time">
 	    </div>
 	    {% if user.is_authenticated %}
-	    <div id="edit"><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></div>
+	    
+	    <div id="edit"><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+	    <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+	    </div>
+	    
 	    {% endif %}
             <h1><a href="/">Моняшкин Блог</a></h1>
+
+
+	    {% if user.is_authenticated %}
+		<h1 id="hello">Моня говорит привет, {{ user.username }}!</h1>
+		{% else %}
+		<h1 id ="hello">Моня приветствует тебя!</h1>
+	    {% endif %}
+
+
+
 	 </div>
     <div class="content container">
         <div class="row">

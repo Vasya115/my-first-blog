@@ -112,6 +112,8 @@ LANGUAGES = (
 
 )
 
+LOGIN_URL = '/blog/login/'
+
 TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
