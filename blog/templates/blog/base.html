@@ -14,7 +14,7 @@
 	
         <div class="page-header">
 		{% if user.is_authenticated %}
-		<a href="{% url 'restricted' %}">Проверка авторизованности</a><br />
+		
 		<a href="{% url 'logout' %}">Выйти</a><br />
 		{% else %}
 		<a href="{% url 'register' %}">Жми, чтобы познакомиться ближе!</a>
