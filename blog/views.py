@@ -9,6 +9,7 @@ from .forms import UserForm, UserProfileForm
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth import logout
+from django.contrib.admin.views.decorators import staff_member_required
 
 # Create your views here.
 def post_list(request):
@@ -33,7 +34,7 @@ def post_new(request):
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
 
-@login_required
+@staff_member_required
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
