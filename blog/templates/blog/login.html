@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<h1>Login to Rango</h1>
+<h1>Пожалуйста, введите свой логин и пароль</h1>
 
         <form id="login_form" method="POST" action="{% url 'login' %}" >
             {% csrf_token %}
-            Username: <input type="text" name="username" value="" size="50" />
+            Логин: <input type="text" name="username" value="" size="50" />
             <br />
-            Password: <input type="password" name="password" value="" size="50" />
+            Пароль: <input type="password" name="password" value="" size="50" />
             <br />
 
             <input type="submit" value="submit" />
