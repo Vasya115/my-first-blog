@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-	
+	<meta name="yandex-verification" content="302bfbbc1b1529cd" />
     </head>
     <body>
 	
@@ -33,9 +33,9 @@
 
 
 	    {% if user.is_authenticated %}
-		<h1 id="hello">Моня говорит привет, {{ user.username }}!</h1>
+		<h2 id="hello">Моня говорит привет, {{ user.username }}!</h2>
 		{% else %}
-		<h1 id ="hello">Моня приветствует тебя!</h1>
+		<h3 id ="hello">Моня приветствует тебя!</h3>
 	    {% endif %}
 
 
